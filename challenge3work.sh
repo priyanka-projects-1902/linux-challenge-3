@@ -98,7 +98,7 @@ do
 	(( counter++ ))
 done
 
-#-------Until Loop--------
+echo "-------Until Loop--------"
 counter=1
 while [ $counter -le 20 ]
 do
@@ -118,13 +118,13 @@ RESULT3=0
 function divide()
 {
 	RESULT1=$(( num1 / num2 ))
-	multiply ;;
+	multiply 
 }
 
 function multiply()
 {
 	RESULT2=$(( RESULT1 * 10 ))
-	subtract ;;
+	subtract 
 }
 
 function subtract()
@@ -133,21 +133,21 @@ function subtract()
 	echo "The result is $RESULT3"
 }
 
-divide ;;
+divide 
 
 #----------Print env variable and remainder-----------
 
-echo " Today's date is $date"
-echo $(( 10 % 3 ))
+echo " Today's date is $(date)"
+echo " The remainder of 10/3 is $(( 10 % 3 )) "
 
 #--------Multiply 4 * 34--------
 
 function multiply2()
 {
-	echo $(( 4 * 34 ))
+	echo " 4 * 34 is $(( 4 * 34 ))"
 }
 
-multiply2 ;;
+multiply2 
 
 
 
